@@ -4,7 +4,7 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 
-public class clsVisa extends UnicastRemoteObject implements itfPasarela
+public class clsVisa extends UnicastRemoteObject implements itfPasarelaVisa
 {
 	ArrayList<String> lTarjetas;
 
@@ -17,7 +17,7 @@ public class clsVisa extends UnicastRemoteObject implements itfPasarela
 	}
 
 	@Override
-	public boolean ValidarPago(String numTarjetaCredito)
+	public boolean RealizarPago(String numTarjetaCredito)
 	{
 		if(lTarjetas.contains(numTarjetaCredito))
 		{
