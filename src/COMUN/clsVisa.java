@@ -4,6 +4,8 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 
+import APIs.itfPasarelaVisa;
+
 public class clsVisa extends UnicastRemoteObject implements itfPasarelaVisa
 {
 	ArrayList<String> lTarjetas;
