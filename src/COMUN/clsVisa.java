@@ -17,7 +17,7 @@ public class clsVisa extends UnicastRemoteObject implements itfPasarelaVisa
 	}
 
 	@Override
-	public boolean RealizarPago(String numTarjetaCredito)
+	public boolean RealizarPago(String numTarjetaCredito) throws RemoteException
 	{
 		if(lTarjetas.contains(numTarjetaCredito))
 		{

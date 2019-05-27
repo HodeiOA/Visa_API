@@ -10,7 +10,7 @@ public class clsMain
 	public static void main(String[] args)
 	{
 		String IP = "127.0.0.1";
-		String Puerto = "1099";
+		String Puerto = "1095";
 		String NombreServicio = "Visa";
 		
 		if (System.getSecurityManager() == null)
@@ -18,11 +18,11 @@ public class clsMain
 			System.setSecurityManager(new SecurityManager());
 		}
 
-		String name = "//" + args[0] + ":" + args[1] + "/" + args[2];
+		String name = "//" + IP + ":" + Puerto + "/" + NombreServicio;
 		
 		try {		
 			itfPasarelaVisa objServer = new clsVisa();
-			Registry registry = LocateRegistry.createRegistry((Integer.valueOf(args[1])));
+			Registry registry = LocateRegistry.createRegistry((Integer.valueOf(Puerto)));
 			//Naming.rebind(name, objServer);
 			registry.rebind(name, objServer);
 			System.out.println("* Server '" + name + "' active and waiting...");
